@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.util.Log;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements ActionBar.TabListener {
 
@@ -152,6 +153,11 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
             }
             return null;
         }
+    }
+
+    public void onClickInfoBook(View v) {
+        Log.v("onClickInfoBook","OK");
+        Toast.makeText(this, "onClickInfoBook", Toast.LENGTH_LONG).show();
     }
 
     /**

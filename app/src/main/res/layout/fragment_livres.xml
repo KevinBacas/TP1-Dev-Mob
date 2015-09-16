@@ -10,4 +10,15 @@
         android:layout_height="wrap_content"
         android:text="@string/livres_info" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/livre_plus_info"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:onClick="onClickInfoBook" />
+
 </RelativeLayout>

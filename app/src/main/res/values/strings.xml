@@ -16,6 +16,8 @@
     <string name="musiques_info">MUSIQUES</string>
 
     <string name="hello_world">Hello world!</string>
+    
+    <string name="livre_plus_info">Plus d’information sur le livre</string>
 
     <string name="action_settings">Settings</string>
 </resources>
