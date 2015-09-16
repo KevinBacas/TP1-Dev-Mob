@@ -20,6 +20,8 @@ import android.widget.TextView;
 import android.util.Log;
 import android.widget.Toast;
 import android.widget.Button;
+import android.content.Intent;
+import android.net.Uri;
 
 public class MainActivity extends AppCompatActivity implements ActionBar.TabListener {
 
@@ -157,11 +159,10 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
     }
 
     public void onClickInfoBook(View v) {
-        Button bt = (Button)v; String nom = bt.getText().toString();
-        Log.d("Event","Click sur le bouton : "+nom);
-        bt.setClickable(false);
-        // un message est affiché pendant une durée de 1s (1000ms)
-        Toast.makeText(this, "Click sur le bouton: "+nom, 1000).show();
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        Uri uri = Uri.parse("http://livre.fnac.com/a3481946/Gregory-Benford-Les-enfants-deMars");
+        intent.setData(uri);
+        startActivity(intent);
     }
 
     /**
