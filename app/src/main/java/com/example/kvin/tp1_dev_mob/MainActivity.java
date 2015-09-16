@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.util.Log;
 import android.widget.Toast;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements ActionBar.TabListener {
 
@@ -156,8 +157,11 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
     }
 
     public void onClickInfoBook(View v) {
-        Log.v("onClickInfoBook","OK");
-        Toast.makeText(this, "onClickInfoBook", Toast.LENGTH_LONG).show();
+        Button bt = (Button)v; String nom = bt.getText().toString();
+        Log.d("Event","Click sur le bouton : "+nom);
+        bt.setClickable(false);
+        // un message est affiché pendant une durée de 1s (1000ms)
+        Toast.makeText(this, "Click sur le bouton: "+nom, 1000).show();
     }
 
     /**
